@@ -1,0 +1,1380 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>Ricardo Mota · Personal Trainer</title>
+    <meta
+      name="description"
+      content="Personal trainer especializado em hipertrofia e emagrecimento. Atende em 3 academias no RJ."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      const CONFIG = {
+        nome: "Ricardo Mota",
+        primeiroNome: "ricardo",
+        cargo: "Personal Trainer",
+        credencial: "CREF 000000-G/RJ",
+        cidade: "Nova Iguaçu, RJ",
+        foto: "perfil.png",
+
+        bioResumo:
+          "Especialista em hipertrofia, emagrecimento e condicionamento físico. Treinos personalizados, acompanhamento real e resultados que aparecem.",
+        bioCompleta:
+          "Formado em Educação Física pela Universidade Exemplo, com mais de 6 anos de experiência em personal training. Trabalho com avaliação física completa, periodização de treinos e acompanhamento nutricional básico. Meu método combina ciência e prática para que você alcance seus objetivos com segurança e consistência.",
+
+        whatsappTel: "5521975811821",
+        whatsappMsg:
+          "Olá! Vi seu cartão e gostaria de saber mais.",
+        telefoneExibicao: "(21) 90000-0000",
+        email: "ricardo@exemplo.com",
+        instagram: "https://instagram.com/ricardomota.pt",
+        instagramExibicao: "@ricardomota.pt",
+        site: window.location.href,
+
+        pixChave: "ricardo@exemplo.com",
+        pixTipo: "E-mail",
+
+        // Fuso fixo do profissional
+        fusoHorario: "America/Sao_Paulo",
+        horarios: {
+          0: [],
+          1: [
+            { inicio: "06:00", fim: "12:00" },
+            { inicio: "16:00", fim: "21:00" },
+          ],
+          2: [
+            { inicio: "06:00", fim: "12:00" },
+            { inicio: "16:00", fim: "21:00" },
+          ],
+          3: [
+            { inicio: "06:00", fim: "12:00" },
+            { inicio: "16:00", fim: "21:00" },
+          ],
+          4: [
+            { inicio: "06:00", fim: "12:00" },
+            { inicio: "16:00", fim: "21:00" },
+          ],
+          5: [{ inicio: "06:00", fim: "12:00" }],
+          6: [{ inicio: "08:00", fim: "11:00" }],
+        },
+
+        // Três locais de atendimento
+        locais: [
+          {
+            nome: "Smart Fit — Rancho Novo",
+            endereco: "R. Dep. Darcílio Ayres Raunhetti, 150",
+            mapLink:
+              "https://share.google/RQnoPUk6NeB6FTlrm",
+          },
+          {
+            nome: "9Fit — Moquetá",
+            endereco: "Av. Dr. Salles Teixeira, 195",
+            mapLink: "https://share.google/5sI164JH66bBBn94y",
+          },
+          {
+            nome: "Academia Scorpion — Cruzeiro do Sul",
+            endereco: "R. Dona Clara de Araújo, 1809",
+            mapLink:
+              "https://share.google/ivyezXDRaqvtuJJeo",
+          },
+        ],
+
+        servicos: [
+          {
+            nome: "Treino avulso",
+            preco: "R$ 120",
+            descricao:
+              "Sessão única de 60 min com acompanhamento completo e planilha do dia.",
+          },
+          {
+            nome: "Pacote mensal · 3x/sem",
+            preco: "R$ 900",
+            descricao:
+              "12 sessões mensais, avaliação física inicial e ajustes de carga semanais.",
+          },
+          {
+            nome: "Pacote mensal · 5x/sem",
+            preco: "R$ 1.300",
+            descricao:
+              "20 sessões mensais, periodização completa e suporte via WhatsApp.",
+          },
+          {
+            nome: "Consultoria online",
+            preco: "R$ 350",
+            descricao:
+              "Planilha de treino personalizada + 1 revisão mensal por vídeo.",
+          },
+        ],
+
+        numeros: [
+          { valor: 6, sufixo: "+", label: "anos de experiência" },
+          { valor: 90, sufixo: "+", label: "alunos atendidos" },
+        ],
+      };
+    </script>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      :root {
+        --bg: #0a0a0a;
+        --bg2: #111111;
+        --bg3: rgba(255, 255, 255, 0.04);
+        --surface: #141414;
+        --neon: #c5f135;
+        --neon-rgb: 197, 241, 53;
+        --neon-dim: rgba(197, 241, 53, 0.12);
+        --neon-dim2: rgba(197, 241, 53, 0.06);
+        --borda: rgba(255, 255, 255, 0.08);
+        --borda-n: rgba(197, 241, 53, 0.25);
+        --texto: #f0ede8;
+        --texto2: #8a8a8a;
+        --texto3: rgba(240, 237, 232, 0.28);
+        --clay: #e8a838;
+        --dot-open: #c5f135;
+        --dot-close: #666;
+        --fonte-n: "Barlow Condensed", sans-serif;
+        --fonte-c: "Barlow", sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--texto);
+        font-family: var(--fonte-c);
+        font-weight: 400;
+        min-height: 100dvh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 32px 16px 48px;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(/banner.png);
+        background-size: cover;
+        background-position: center;
+        opacity: 0.12; /* ← opacidade só na imagem */
+        z-index: -1; /* joga atrás do conteúdo */
+      }
+      .card {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      /* ══ ANIMAÇÕES ══ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.55s ease,
+          transform 0.55s ease;
+      }
+      .reveal.v {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .pop {
+        opacity: 0;
+        transform: scale(0.93);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
+      }
+      .pop.v {
+        opacity: 1;
+        transform: scale(1);
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes girar {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes pulsarNeon {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(var(--neon-rgb), 0);
+        }
+        50% {
+          box-shadow: 0 0 0 8px rgba(var(--neon-rgb), 0.12);
+        }
+      }
+
+      @keyframes pulsarDot {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.6;
+          transform: scale(1.35);
+        }
+      }
+
+      /* ══ TOPO ══ */
+      .topo-linha {
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--neon),
+          transparent
+        );
+        border-radius: 99px;
+        margin-bottom: 36px;
+        animation: fadeIn 1s 0.2s both;
+      }
+
+      /* ══ HERO ══ */
+      .cabecalho {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+      .foto-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+
+      /* traço SVG animado */
+      .foto-svg {
+        position: absolute;
+        inset: -20px;
+        width: 136px;
+        height: 136px;
+        pointer-events: none;
+        z-index: 0;
+        overflow: visible;
+      }
+      .foto-svg circle {
+        fill: none;
+        stroke: var(--neon);
+        stroke-width: 0.9;
+        stroke-dasharray: 4 6;
+        animation: girarSVG 14s linear infinite;
+        transform-origin: center;
+        opacity: 0.55;
+      }
+      @keyframes girarSVG { to { transform: rotate(360deg); } }
+
+      .foto-anel {
+        position: absolute;
+        inset: -5px;
+        border-radius: 50%;
+        background: conic-gradient(var(--neon), var(--clay), var(--neon));
+        animation: girar 8s linear infinite;
+        z-index: 0;
+        opacity: 0.8;
+      }
+      .foto-anel::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        border-radius: 50%;
+        background: var(--bg);
+      }
+
+      .foto {
+        position: relative;
+        z-index: 1;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        object-fit: cover;
+      }
+      .foto-ph {
+        position: relative;
+        z-index: 1;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background: var(--bg2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--fonte-n);
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--neon);
+        margin: 0 auto;
+      }
+
+      .nome {
+        font-family: var(--fonte-n);
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        line-height: 1.1;
+        margin-bottom: 4px;
+        color: var(--texto);
+      }
+      .profissao {
+        font-size: 11px;
+        color: var(--neon);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+      .crp {
+        font-size: 11px;
+        color: var(--texto3);
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+      }
+      .local-cidade {
+        font-size: 13px;
+        color: var(--texto2);
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 14px;
+      }
+      .local-cidade svg {
+        opacity: 0.6;
+      }
+
+      .selos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 4px;
+      }
+      .selo {
+        font-size: 11px;
+        padding: 4px 11px;
+        border-radius: 99px;
+        border: 1px solid var(--borda-n);
+        color: var(--neon);
+        background: var(--neon-dim2);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      /* status */
+      .status-linha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        font-size: 0.78rem;
+        color: var(--texto2);
+        margin-top: 8px;
+      }
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--dot-close);
+        flex-shrink: 0;
+        transition: background 0.4s;
+      }
+      .status-dot.aberto {
+        background: var(--dot-open);
+        animation: pulsarDot 2s ease-in-out infinite;
+      }
+      .status-fuso {
+        font-size: 0.66rem;
+        color: var(--texto3);
+        display: block;
+        margin-top: 0.1rem;
+      }
+
+      /* ══ DIVISOR ══ */
+      hr {
+        border: none;
+        border-top: 1px solid var(--borda);
+        margin: 0 0 24px;
+      }
+
+      /* ══ SOBRE ══ */
+      .sobre {
+        margin-bottom: 24px;
+      }
+      .sobre-btn {
+        width: 100%;
+        background: var(--bg3);
+        border: 1px solid var(--borda);
+        border-radius: 12px;
+        padding: 14px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: var(--texto);
+        font-size: 13px;
+        font-weight: 500;
+        font-family: var(--fonte-c);
+        transition: border-color 0.2s;
+      }
+      .sobre-btn:hover {
+        border-color: var(--borda-n);
+      }
+      .sobre-seta {
+        transition: transform 0.3s;
+        color: var(--texto2);
+      }
+      .sobre-btn[aria-expanded="true"] .sobre-seta {
+        transform: rotate(180deg);
+      }
+      .sobre-body {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.35s ease,
+          padding 0.3s;
+        font-size: 13.5px;
+        line-height: 1.7;
+        color: var(--texto2);
+        text-align: justify;
+      }
+      .sobre-body.open {
+        max-height: 320px;
+        padding: 14px 16px 4px;
+      }
+
+      /* ══ BOTÕES ══ */
+      .acoes {
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        margin-bottom: 24px;
+      }
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 14px 16px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 500;
+        color: var(--texto);
+        background: var(--bg3);
+        border: 1px solid var(--borda);
+        transition:
+          background 0.18s,
+          border-color 0.18s,
+          transform 0.12s;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        font-family: var(--fonte-c);
+        width: 100%;
+        text-align: left;
+      }
+      .btn:active {
+        transform: scale(0.98);
+      }
+      .btn:hover {
+        background: var(--neon-dim);
+        border-color: var(--borda-n);
+      }
+      .btn-p {
+        background: var(--neon);
+        border-color: var(--neon);
+        color: #0a0a0a;
+        font-weight: 700;
+        animation: pulsarNeon 3s ease-in-out infinite;
+      }
+      .btn-p:hover {
+        filter: brightness(1.08);
+        border-color: var(--neon);
+        color: var(--neon);
+      }
+      .btn-p .btn-ico {
+        background: rgba(0, 0, 0, 0.18);
+      }
+      .btn-ico {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .btn-lbl {
+        flex: 1;
+      }
+      .btn-sub {
+        font-size: 11px;
+        font-weight: 300;
+        opacity: 0.6;
+        display: block;
+        margin-top: 1px;
+      }
+      .btn-arr {
+        opacity: 0.3;
+        flex-shrink: 0;
+      }
+      .feedback {
+        font-size: 11px;
+        color: var(--neon);
+        margin-top: 2px;
+        display: none;
+        font-weight: 600;
+      }
+      .feedback.on {
+        display: block;
+      }
+      .duo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9px;
+      }
+
+      /* ══ LOCAIS ══ */
+      .locais-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .local-card {
+        background: var(--bg3);
+        border: 1px solid var(--borda);
+        border-radius: 12px;
+        padding: 13px 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--texto);
+        transition:
+          border-color 0.2s,
+          background 0.2s;
+      }
+      .local-card:hover {
+        border-color: var(--borda-n);
+        background: var(--neon-dim);
+      }
+      .local-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: var(--neon-dim);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .local-icon svg {
+        stroke: var(--neon);
+      }
+      .local-nome {
+        font-size: 13.5px;
+        font-weight: 500;
+        line-height: 1.2;
+      }
+      .local-end {
+        font-size: 11px;
+        color: var(--texto2);
+        margin-top: 2px;
+        display: block;
+      }
+      .local-arr {
+        opacity: 0.3;
+        flex-shrink: 0;
+        margin-left: auto;
+      }
+
+      /* ══ PIX ══ */
+      .pix-card {
+        background: var(--bg3);
+        border: 1px solid var(--borda);
+        border-radius: 12px;
+        padding: 14px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .pix-tipo {
+        display: block;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--neon);
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+      .pix-chave {
+        font-size: 13px;
+        color: var(--texto);
+        word-break: break-all;
+      }
+      .pix-btn {
+        flex-shrink: 0;
+        background: none;
+        border: 1px solid var(--borda-n);
+        color: var(--neon);
+        border-radius: 99px;
+        padding: 6px 14px;
+        font-size: 12px;
+        font-family: var(--fonte-c);
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .pix-btn:hover {
+        background: var(--neon);
+        color: #0a0a0a;
+      }
+      .pix-fb {
+        font-size: 11px;
+        color: var(--neon);
+        text-align: center;
+        margin-top: 8px;
+        display: none;
+        font-weight: 600;
+      }
+      .pix-fb.on {
+        display: block;
+      }
+
+      /* ══ HORÁRIOS ══ */
+      .horarios {
+        background: var(--bg3);
+        border: 1px solid var(--borda);
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 24px;
+      }
+      .horarios-fuso {
+        font-size: 11px;
+        color: var(--texto3);
+        margin: -2px 0 12px;
+      }
+      .hitem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        padding: 5px 0;
+        gap: 10px;
+      }
+      .hitem + .hitem {
+        border-top: 1px solid var(--borda);
+      }
+      .hdia {
+        color: var(--texto2);
+      }
+      .hhora {
+        color: var(--texto);
+        font-weight: 500;
+        text-align: right;
+      }
+      .hhoje .hdia {
+        color: var(--neon);
+        font-weight: 600;
+      }
+      .hhoje .hhora {
+        color: var(--neon);
+      }
+      .hfech {
+        color: var(--texto3);
+        font-style: italic;
+        font-size: 12px;
+      }
+
+      /* ══ SERVIÇOS ══ */
+      .sec-titulo {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--texto2);
+        margin-bottom: 12px;
+      }
+      .svc {
+        border: 1px solid var(--borda);
+        border-radius: 11px;
+        margin-bottom: 7px;
+        overflow: hidden;
+        background: var(--bg3);
+      }
+      .svc-h {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 15px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--texto);
+        font-family: var(--fonte-c);
+        font-size: 13.5px;
+        font-weight: 500;
+        text-align: left;
+        transition: color 0.2s;
+      }
+      .svc-h:hover {
+        color: var(--neon);
+      }
+      .svc-dir {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .svc-preco {
+        font-weight: 700;
+        color: var(--neon);
+        font-size: 14px;
+        white-space: nowrap;
+      }
+      .svc-arr {
+        color: var(--texto3);
+        transition: transform 0.3s;
+        flex-shrink: 0;
+      }
+      .svc-h[aria-expanded="true"] .svc-arr {
+        transform: rotate(180deg);
+      }
+      .svc-d {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.3s ease,
+          padding 0.3s;
+        font-size: 13px;
+        color: var(--texto2);
+        line-height: 1.6;
+      }
+      .svc-d.open {
+        max-height: 100px;
+        padding: 0 15px 13px;
+      }
+
+      /* ══ NÚMEROS ══ */
+      .nums-grid {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+      }
+      .num-item {
+        flex: 1;
+        text-align: center;
+        background: var(--bg3);
+        border: 1px solid var(--borda);
+        border-radius: 12px;
+        padding: 14px 10px;
+      }
+      .num-val {
+        font-family: var(--fonte-n);
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--neon);
+        display: block;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .num-label {
+        font-size: 10px;
+        color: var(--texto2);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        line-height: 1.3;
+      }
+
+      /* ══ TAGS ══ */
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-bottom: 24px;
+      }
+      .tag {
+        font-size: 12px;
+        padding: 5px 12px;
+        border-radius: 99px;
+        background: var(--bg3);
+        border: 1px solid var(--borda);
+        color: var(--clay);
+      }
+
+      /* ══ RODAPÉ ══ */
+      .rodape {
+        text-align: center;
+        font-size: 11px;
+        color: var(--texto3);
+        padding-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="topo-linha"></div>
+
+      <!-- HERO -->
+      <header class="cabecalho pop">
+        <div class="foto-wrapper">
+          <svg class="foto-svg" viewBox="0 0 136 136" aria-hidden="true">
+            <circle cx="68" cy="68" r="62"/>
+          </svg>
+          </svg>
+          <div class="foto-anel" aria-hidden="true"></div>
+          <!-- Com foto: <img class="foto" src="foto.jpg" alt="ricardo Mota"> -->
+          <!-- <div class="foto-ph">R</div> -->
+          <img class="foto" src="perfil.png" alt="ricardo Mota" />
+        </div>
+
+        <h1 class="nome">Ricardo Mota</h1>
+        <p class="profissao">Personal Trainer</p>
+        <p class="crp">CREF 000000-G/RJ</p>
+        <p class="local-cidade">
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+            />
+            <circle cx="12" cy="9" r="2.5" />
+          </svg>
+          Nova Iguaçu, RJ
+        </p>
+        <div class="selos">
+          <span class="selo">⚡ Hipertrofia</span>
+          <span class="selo">🔥 Emagrecimento</span>
+          <span class="selo">🏋️ Funcional</span>
+        </div>
+        <div class="status-linha">
+          <span class="status-dot" id="status-dot"></span>
+          <span>
+            <span id="status-texto">—</span>
+          </span>
+        </div>
+      </header>
+
+      <hr />
+
+      <!-- SOBRE -->
+      <div class="sobre reveal">
+        <button
+          class="sobre-btn"
+          id="sobre-btn"
+          aria-expanded="false"
+          aria-controls="sobre-body"
+        >
+          Meu trabalho
+          <svg
+            class="sobre-seta"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </button>
+        <div class="sobre-body" id="sobre-body">
+          <p id="bio-resumo"></p>
+          <p id="bio-completa" style="margin-top: 10px; display: none"></p>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- AÇÕES -->
+      <section class="acoes reveal">
+        <a
+          class="btn btn-p"
+          id="btn-whats"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="btn-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+              />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.547 5.874L.057 23.357a.75.75 0 00.917.908l5.623-1.472A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.7-.5-5.25-1.373l-.378-.213-3.916 1.026 1.043-3.807-.233-.38A10 10 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"
+              />
+            </svg>
+          </span>
+          <span class="btn-lbl"> Agendar aula experimental </span>
+          <svg
+            class="btn-arr"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path d="M7 17L17 7M7 7h10v10" />
+          </svg>
+        </a>
+
+        <a class="btn" id="btn-insta" href="#" target="_blank" rel="noopener">
+          <span class="btn-ico"
+            ><svg
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle
+                cx="17.5"
+                cy="6.5"
+                r=".8"
+                fill="currentColor"
+                stroke="none"
+              /></svg
+          ></span>
+          <span class="btn-lbl">
+            <span id="txt-insta-h">@ricardomota.pt</span>
+            <span class="btn-sub">Ver treinos e resultados</span>
+          </span>
+          <svg
+            class="btn-arr"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path d="M7 17L17 7M7 7h10v10" />
+          </svg>
+        </a>
+
+        <button class="btn" id="btn-tel">
+          <span class="btn-ico"
+            ><svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <rect x="9" y="9" width="13" height="13" rx="2" />
+              <path
+                d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"
+              /></svg
+          ></span>
+          <span class="btn-lbl">
+            Copiar número
+            <span class="btn-sub" id="tel-display"></span>
+            <span class="feedback" id="fb-tel">✓ Copiado!</span>
+          </span>
+        </button>
+
+        <button class="btn" id="btn-vcf">
+          <span class="btn-ico"
+            ><svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+              <circle cx="12" cy="7" r="4" /></svg
+          ></span>
+          <span class="btn-lbl">
+            Salvar contato
+            <span class="btn-sub">Abre nos Contatos do celular</span>
+          </span>
+          <svg
+            class="btn-arr"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"
+            />
+          </svg>
+        </button>
+      </section>
+
+      <hr />
+
+      <!-- PIX -->
+      <section class="reveal" style="margin-bottom: 24px">
+        <p class="sec-titulo">Pagamento via PIX</p>
+        <div class="pix-card">
+          <div>
+            <span class="pix-tipo" id="pix-tipo-label"></span>
+            <p class="pix-chave" id="pix-chave-display"></p>
+          </div>
+          <button class="pix-btn" id="btn-pix">Copiar chave</button>
+        </div>
+        <p class="pix-fb" id="fb-pix">✓ Chave copiada!</p>
+      </section>
+
+      <hr />
+
+      <!-- LOCAIS -->
+      <section class="reveal" style="margin-bottom: 24px">
+        <p class="sec-titulo">Locais</p>
+        <div class="locais-lista" id="lista-locais"></div>
+      </section>
+
+      <hr />
+
+      <!-- HORÁRIOS -->
+      <section class="horarios reveal">
+        <p class="sec-titulo" style="margin-bottom: 4px">
+          Horário de atendimento
+        </p>
+        <p class="horarios-fuso">horário de Brasília</p>
+        <div id="lista-horarios"></div>
+      </section>
+
+      <hr />
+
+      <!-- SERVIÇOS -->
+      <section class="reveal" style="margin-bottom: 24px">
+        <p class="sec-titulo">Planos & valores</p>
+        <div id="lista-servicos"></div>
+      </section>
+
+      <hr />
+
+      <!-- NÚMEROS -->
+      <div class="nums-grid reveal" id="lista-numeros"></div>
+
+      <hr />
+
+      <!-- ESPECIALIDADES -->
+      <div class="reveal">
+        <p class="sec-titulo">Especialidades</p>
+        <div class="tags">
+          <span class="tag">Hipertrofia</span>
+          <span class="tag">Emagrecimento</span>
+          <span class="tag">Funcional</span>
+          <span class="tag">Condicionamento</span>
+          <span class="tag">Reabilitação</span>
+          <span class="tag">Idosos</span>
+          <span class="tag">Iniciantes</span>
+          <span class="tag">HIIT</span>
+          <span class="tag">Mobilidade</span>
+        </div>
+      </div>
+      <hr>
+
+      <footer class="rodape">
+        <p>Cartão Digital · Ricardo Mota</p>
+      </footer>
+    </main>
+
+    <script>
+      // ══ PREENCHER ══
+      (function () {
+        const C = CONFIG;
+        document.title = `${C.nome} · ${C.cargo}`;
+        document.getElementById("bio-resumo").textContent = C.bioResumo;
+        document.getElementById("bio-completa").textContent = C.bioCompleta;
+        document.getElementById("txt-insta-h").textContent =
+          C.instagramExibicao;
+        document.getElementById("tel-display").textContent = C.telefoneExibicao;
+        document.getElementById("pix-tipo-label").textContent = C.pixTipo;
+        document.getElementById("pix-chave-display").textContent = C.pixChave;
+
+        document.getElementById("btn-whats").href =
+          `https://wa.me/${C.whatsappTel}?text=${encodeURIComponent(C.whatsappMsg)}`;
+        document.getElementById("btn-insta").href = C.instagram;
+
+        // Locais
+        const ll = document.getElementById("lista-locais");
+        C.locais.forEach((l) => {
+          const a = document.createElement("a");
+          a.className = "local-card";
+          a.href = l.mapLink;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.innerHTML = `
+      <span class="local-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span>
+      <span><span class="local-nome">${l.nome}</span><span class="local-end">${l.endereco}</span></span>
+      <svg class="local-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>`;
+          ll.appendChild(a);
+        });
+
+        // Serviços
+        const ls = document.getElementById("lista-servicos");
+        C.servicos.forEach((s) => {
+          const div = document.createElement("div");
+          div.className = "svc";
+          div.innerHTML = `
+      <button class="svc-h" aria-expanded="false">
+        ${s.nome}
+        <span class="svc-dir">
+          <span class="svc-preco">${s.preco}</span>
+          <svg class="svc-arr" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </button>
+      <div class="svc-d"><p>${s.descricao}</p></div>`;
+          ls.appendChild(div);
+        });
+        document.querySelectorAll(".svc-h").forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const open = btn.getAttribute("aria-expanded") === "true";
+            document.querySelectorAll(".svc-h").forEach((b) => {
+              b.setAttribute("aria-expanded", "false");
+              b.nextElementSibling.classList.remove("open");
+            });
+            if (!open) {
+              btn.setAttribute("aria-expanded", "true");
+              btn.nextElementSibling.classList.add("open");
+            }
+          });
+        });
+
+        // Números
+        const ln = document.getElementById("lista-numeros");
+        C.numeros.forEach((n) => {
+          const item = document.createElement("div");
+          item.className = "num-item";
+          item.innerHTML = `<span class="num-val" data-alvo="${n.valor}" data-sufixo="${n.sufixo}">${n.valor}${n.sufixo}</span><span class="num-label">${n.label}</span>`;
+          ln.appendChild(item);
+        });
+      })();
+
+      // ══ FUSO FIXO ══
+      const DIAS_PT = [
+        "domingo",
+        "segunda",
+        "terça",
+        "quarta",
+        "quinta",
+        "sexta",
+        "sábado",
+      ];
+      function toMin(hhmm) {
+        const [h, m] = hhmm.split(":").map(Number);
+        return h * 60 + m;
+      }
+      function agoraNoFuso(tz) {
+        const p = new Intl.DateTimeFormat("en-US", {
+          timeZone: tz,
+          weekday: "short",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        }).formatToParts(new Date());
+        const m = {};
+        p.forEach((x) => (m[x.type] = x.value));
+        const map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+        let h = parseInt(m.hour, 10);
+        if (h === 24) h = 0;
+        return { dia: map[m.weekday], min: h * 60 + parseInt(m.minute, 10) };
+      }
+      function calcStatus() {
+        const C = CONFIG,
+          { dia, min } = agoraNoFuso(C.fusoHorario);
+        const bl = C.horarios[dia] || [];
+        for (const b of bl) {
+          if (min >= toMin(b.inicio) && min < toMin(b.fim))
+            return { aberto: true, msg: `Disponível agora · Até ${b.fim}` };
+        }
+        for (const b of bl) {
+          if (min < toMin(b.inicio))
+            return {
+              aberto: false,
+              msg: `Indisponível · Abre hoje às ${b.inicio}`,
+            };
+        }
+        for (let i = 1; i <= 7; i++) {
+          const d = (dia + i) % 7,
+            blocos = CONFIG.horarios[d] || [];
+          if (blocos.length) {
+            const dn = i === 1 ? "amanhã" : DIAS_PT[d];
+            return {
+              aberto: false,
+              msg: `Indisponível · Abre ${dn} às ${blocos[0].inicio}`,
+            };
+          }
+        }
+        return { aberto: false, msg: "Indisponível no momento" };
+      }
+      function atualizarStatus() {
+        const s = calcStatus();
+        document
+          .getElementById("status-dot")
+          .classList.toggle("aberto", s.aberto);
+        document.getElementById("status-texto").textContent = s.msg;
+      }
+      function montarHorarios() {
+        const C = CONFIG,
+          { dia: hoje } = agoraNoFuso(C.fusoHorario);
+        const cont = document.getElementById("lista-horarios");
+        cont.innerHTML = "";
+        for (let d = 0; d < 7; d++) {
+          const bl = C.horarios[d] || [],
+            div = document.createElement("div");
+          div.className = "hitem" + (d === hoje ? " hhoje" : "");
+          const horas = bl.length
+            ? bl.map((b) => `${b.inicio}–${b.fim}`).join(" · ")
+            : "—";
+          div.innerHTML = `<span class="hdia">${DIAS_PT[d]}</span><span class="${bl.length ? "hhora" : "hfech"}">${horas}</span>`;
+          cont.appendChild(div);
+        }
+      }
+      atualizarStatus();
+      montarHorarios();
+      setInterval(atualizarStatus, 60000);
+
+      // ══ REVEAL ══
+      const obs = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("v");
+              obs.unobserve(e.target);
+            }
+          }),
+        { threshold: 0.1 },
+      );
+      document
+        .querySelectorAll(".reveal,.pop")
+        .forEach((el) => obs.observe(el));
+      setTimeout(
+        () =>
+          document.querySelectorAll(".reveal,.pop").forEach((el) => {
+            if (el.getBoundingClientRect().top < window.innerHeight)
+              el.classList.add("v");
+          }),
+        60,
+      );
+
+      // ══ CONTADORES ══
+      const cntObs = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const el = e.target,
+              alvo = +el.dataset.alvo,
+              sfx = el.dataset.sufixo || "",
+              dur = 1400,
+              t0 = performance.now();
+            function tick(now) {
+              const p = Math.min((now - t0) / dur, 1);
+              el.textContent = Math.floor(p * alvo) + sfx;
+              if (p < 1) requestAnimationFrame(tick);
+              else el.textContent = alvo + sfx;
+            }
+            requestAnimationFrame(tick);
+            cntObs.unobserve(el);
+          }),
+        { threshold: 0.5 },
+      );
+      document.querySelectorAll(".num-val").forEach((el) => cntObs.observe(el));
+
+      // ══ SOBRE ══
+      const sobreBtn = document.getElementById("sobre-btn"),
+        sobreBody = document.getElementById("sobre-body");
+      const bioCompleta = document.getElementById("bio-completa");
+      sobreBtn.addEventListener("click", () => {
+        const open = sobreBtn.getAttribute("aria-expanded") === "true";
+        sobreBtn.setAttribute("aria-expanded", !open);
+        sobreBody.classList.toggle("open", !open);
+        bioCompleta.style.display = !open ? "block" : "none";
+      });
+
+      // ══ COPIAR ══
+      function copiar(txt, fbId) {
+        navigator.clipboard
+          .writeText(txt)
+          .catch(() => {
+            const ta = document.createElement("textarea");
+            ta.value = txt;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+          })
+          .finally?.(() => {});
+        try {
+          navigator.clipboard.writeText(txt);
+        } catch (e) {}
+        const f = document.getElementById(fbId);
+        if (f) {
+          f.classList.add("on");
+          setTimeout(() => f.classList.remove("on"), 2500);
+        }
+      }
+      document
+        .getElementById("btn-tel")
+        .addEventListener("click", () =>
+          copiar(CONFIG.telefoneExibicao, "fb-tel"),
+        );
+      document.getElementById("btn-pix").addEventListener("click", () => {
+        navigator.clipboard.writeText(CONFIG.pixChave);
+        const f = document.getElementById("fb-pix");
+        f.classList.add("on");
+        setTimeout(() => f.classList.remove("on"), 2500);
+      });
+
+      // ══ VCF ══
+      document.getElementById("btn-vcf").addEventListener("click", () => {
+        const C = CONFIG;
+        const vcf = `BEGIN:VCARD\r\nVERSION:3.0\r\nFN:${C.nome}\r\nTITLE:${C.cargo}\r\nTEL;TYPE=CELL:${C.telefoneExibicao}\r\nEMAIL:${C.email}\r\nURL:${C.site}\r\nNOTE:${C.credencial}\r\nEND:VCARD\r\n`;
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(new Blob([vcf], { type: "text/vcard" }));
+        a.download = `${C.primeiroNome}.vcf`;
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1500);
+      });
+    </script>
+  </body>
+</html>
